@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - 'POSTGRES_DB: learning_mentor_db'
+      - 'POSTGRES_USER: learningmentor'
+      - 'POSTGRES_PASSWORD: learningmentorpassword'
+    ports:
+      - "5432:5432"
+    volumes:
+      - learningmentor_data:/var/lib/postgresql/data
+
+volumes:
+  learningmentor_data:
